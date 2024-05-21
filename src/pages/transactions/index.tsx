@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { TransactionContext } from "../../contexts/transactionsContext";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/summary";
 import { SearchForm } from "./components/SearchForm";
@@ -8,28 +9,10 @@ import {
   TransactionsTable,
 } from "./styles";
 
-interface Transaction {
-  id: number;
-  type: "income" | "outcome";
-  category: string;
-  description: string;
-  price: number;
-  createdAt: string;
-}
 
 export function Transactions() {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
 
-  async function loadTransactions() {
-    const response = await fetch("http://localhost:3000/transactions");
-    const data = await response.json();
-
-    setTransactions(data);
-  }
-
-  useEffect(() => {
-    loadTransactions();
-  }, []);
+    const {transactions} = useContext(TransactionContext);
 
   return (
     <>
