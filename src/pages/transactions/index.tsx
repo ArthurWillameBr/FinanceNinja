@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TransactionContext } from "../../contexts/transactionsContext";
+import { TransactionsContext } from "../../contexts/transactionsContext";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/summary";
 import { SearchForm } from "./components/SearchForm";
@@ -8,11 +8,10 @@ import {
   TransactionsContainer,
   TransactionsTable,
 } from "./styles";
-
+import { priceFormatter } from "../../utils/formatter";
 
 export function Transactions() {
-
-    const {transactions} = useContext(TransactionContext);
+  const { transactions } = useContext(TransactionsContext);
 
   return (
     <>
@@ -29,7 +28,8 @@ export function Transactions() {
                   <td>{transaction.description}</td>
                   <td>
                     <PriceHighlight variant={transaction.type}>
-                      {transaction.price}
+                      {transaction.type === "outcome" && "- "}
+                      {priceFormatter.format(transaction.price)}
                     </PriceHighlight>
                   </td>
                   <td>{transaction.category}</td>
