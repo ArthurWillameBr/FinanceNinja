@@ -1,20 +1,44 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Desenvolvimento de Site",
-            "type": "income",
-            "category": "venda",
-            "price": 14000,
-            "createdAt": "2024-05-21T15:51:49.693Z" 
-        },
-        {
-            "id": 1,
-            "description": "Hamburger",
-            "type": "outcome",
-            "category": "alimentação",
-            "price": 50,
-            "createdAt": "2024-05-21T15:34:49.693Z" 
-        }
-    ]
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Desenvolvimento de Site",
+      "type": "income",
+      "category": "venda",
+      "price": 14000,
+      "createdAt": "2024-05-21T15:51:49.693Z"
+    },
+    {
+      "id": "2",
+      "description": "Hamburger",
+      "type": "outcome",
+      "category": "alimentação",
+      "price": 50,
+      "createdAt": "2024-05-21T15:34:49.693Z"
+    },
+    {
+      "id": "9183",
+      "category": "PC",
+      "description": "Notbook",
+      "type": "outcome",
+      "price": 2199,
+      "createdAt": "2024-05-22T19:30:13.209Z"
+    },
+    {
+      "id": "6795",
+      "description": "Pastel",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-05-22T19:55:10.960Z"
+    },
+    {
+      "id": "9f4e",
+      "description": "Bolsa ",
+      "price": 700,
+      "category": "Bolsa de estudos",
+      "type": "income",
+      "createdAt": "2024-05-22T19:56:46.973Z"
+    }
+  ]
 }
