@@ -42,7 +42,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
             q: query
         }
     })
-    console.log("Response data: ", response.data);
     setTransactions(response.data);
   }
 
@@ -61,7 +60,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
 
   useEffect(() => {
     fetchTransactions();
-    console.log("Transactions: ", transactions);
   }, []);
 
   return (
